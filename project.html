@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>My Portfolio Website</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <style>
+    body {
+      font-family: 'Poppins', sans-serif;
+      background-color: #f8f9fa;
+    }
+    .hero {
+      height: 80vh;
+      background: linear-gradient(to right, #667eea, #764ba2);
+      color: white;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+    }
+    .rounded-photo {
+      width: 160px;
+      height: 160px;
+      object-fit: cover;
+      border-radius: 50%;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+      margin-bottom: 20px;
+    }
+    .project-card:hover {
+      transform: translateY(-10px);
+      transition: 0.3s ease;
+      box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+    }
+    footer {
+      background-color: #212529;
+      color: white;
+      padding: 15px 0;
+      text-align: center;
+      margin-top: 40px;
+    }
+    /* Fade in animation */
+    .fade-in {
+      opacity: 0;
+      transform: translateY(20px);
+      animation-fill-mode: forwards;
+      animation-name: fadeInUp;
+      animation-duration: 1s;
+      animation-timing-function: ease-out;
+    }
+    @keyframes fadeInUp {
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+    /* Skills progress bars */
+    .skill-label {
+      font-weight: 600;
+      margin-bottom: 5px;
+    }
+  </style>
+</head>
+<body>
+
+<!-- Navbar -->
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+  <div class="container">
+    <a class="navbar-brand" href="#home">MyPortfolio</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" 
+      aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav ms-auto">
+        <li class="nav-item"><a class="nav-link active" href="#home">Home</a></li>
+        <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
+        <li class="nav-item"><a class="nav-link" href="#projects">Projects</a></li>
+        <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<!-- Hero Section -->
+<section id="home" class="hero fade-in" style="animation-delay: 0s;">
+  <div class="container">
+    <h1 class="display-4 fw-bold">Welcome to My Portfolio</h1>
+    <p class="lead">I'm a Front-End Developer passionate about design and coding.</p>
+    <a href="#projects" class="btn btn-primary btn-lg mt-3">View My Work</a>
+  </div>
+</section>
+
+<!-- About Section -->
+<section id="about" class="py-5 bg-light fade-in" style="animation-delay: 0.3s;">
+  <div class="container text-center">
+    <img src="https://images.unsplash.com/photo-1511367461989-f85a21fda167?auto=format&fit=facearea&w=400&h=400" 
+    alt="Profile Photo" class="rounded-photo mx-auto d-block" />
+    <h2 class="mb-3">About Me</h2>
+    <p class="lead mx-auto" style="max-width: 700px;">
+      Hello! I'm a web developer who loves transforming ideas into beautiful digital experiences. Skilled in HTML, CSS, Bootstrap, and JavaScript, I focus on crafting responsive, user-friendly websites optimized for all devices.
+    </p>
+
+    <!-- Skills -->
+    <div class="mt-5 text-start mx-auto" style="max-width: 600px;">
+      <h3 class="mb-4">Skills</h3>
+      <div class="mb-3">
+        <div class="skill-label">HTML5</div>
+        <div class="progress">
+          <div class="progress-bar bg-primary" style="width: 90%;">90%</div>
+        </div>
+      </div>
+      <div class="mb-3">
+        <div class="skill-label">CSS3</div>
+        <div class="progress">
+          <div class="progress-bar bg-info" style="width: 85%;">85%</div>
+        </div>
+      </div>
+      <div class="mb-3">
+        <div class="skill-label">JavaScript</div>
+        <div class="progress">
+          <div class="progress-bar bg-warning" style="width: 80%;">80%</div>
+        </div>
+      </div>
+      <div class="mb-3">
+        <div class="skill-label">Bootstrap</div>
+        <div class="progress">
+          <div class="progress-bar bg-danger" style="width: 90%;">90%</div>
+        </div>
+      <div class="mb-3">
+        <div class="skill-label">python</div>
+        <div class="progress">
+          <div class="progress-bar bg-warning" style="width: 75%;">75%</div>
+        </div>  
+      </div>
+    </div>
+
+    <!-- Education -->
+    <div class="mt-5 mx-auto" style="max-width: 600px; text-align: left;">
+      <h3 class="mb-4">Education</h3>
+      <p><strong>Bachelor of Computer Applications (BCA)</strong></p>
+      <p>Completed BCA degree with specialization in software development and web technologies.</p>
+      <p>University:national college </p>
+      <p>Year: 2026</p>
+    </div>
+  </div>
+</section>
+
+<!-- Projects Section -->
+<section id="projects" class="py-5 fade-in" style="animation-delay: 0.6s;">
+  <div class="container">
+    <h2 class="text-center mb-5">My Projects</h2>
+    <div class="row g-4">
+      <div class="col-md-4">
+        <div class="card project-card shadow-sm">
+          <img src="https://via.placeholder.com/400x250" class="card-img-top" alt="Project 1" />
+          <div class="card-body">
+            <h5 class="card-title">Portfolio Website</h5>
+            <p class="card-text">A modern, responsive personal portfolio built with Bootstrap.</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="card project-card shadow-sm">
+          <img src="https://via.placeholder.com/400x250" class="card-img-top" alt="Project 2" />
+          <div class="card-body">
+            <h5 class="card-title">Landing Page</h5>
+            <p class="card-text">A product landing page exhibiting clean UI and UX design.</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="card project-card shadow-sm">
+          <img src="https://via.placeholder.com/400x250" class="card-img-top" alt="Project 3" />
+          <div class="card-body">
+            <h5 class="card-title">Form Validation</h5>
+            <p class="card-text">JavaScript-based contact form validation for better user interaction.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Contact Section -->
+<section id="contact" class="bg-light py-5 fade-in" style="animation-delay: 0.9s;">
+  <div class="container">
+    <h2 class="text-center mb-4">Contact Me</h2>
+    <form onsubmit="return validateForm()" class="mx-auto" style="max-width: 500px;">
+      <div class="mb-3">
+        <label for="name" class="form-label">Name:</label>
+        <input type="text" id="name" class="form-control" placeholder="Enter your name" required />
+      </div>
+      <div class="mb-3">
+        <label for="email" class="form-label">Email:</label>
+        <input type="email" id="email" class="form-control" placeholder="Enter your email" required />
+      </div>
+      <div class="mb-3">
+        <label for="message" class="form-label">Message:</label>
+        <textarea id="message" rows="4" class="form-control" placeholder="Write your message"></textarea>
+      </div>
+      <button type="submit" class="btn btn-primary w-100">Send Message</button>
+    </form>
+  </div>
+</section>
+
+<footer>
+  <p>© 2025 My Portfolio | yeshwanth p</p>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+<script>
+  function validateForm() {
+    const name = document.getElementById('name').value.trim(),
+          email = document.getElementById('email').value.trim();
+    if (!name || !email) {
+      alert('Please fill in all required fields.');
+      return false;
+    }
+    alert('Message sent successfully!');
+    return true;
+  }
+</script>
+
+</body>
+</html>
